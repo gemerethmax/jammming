@@ -1,0 +1,21 @@
+
+.App-header {
+  background-image: url('/public/GNX.png');
+  background-size: cover;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(165, 27, 27);
+}
+
+.results-playlist {
+  display: flex;
+}
+
+main {
+  background-image: url('/public/kendrickAlbum.png');
+  background-size: cover;
+  min-height: 100vh;
+}

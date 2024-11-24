@@ -1,0 +1,10 @@
+#saveToSpotifyButton {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    border-radius: 500px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}

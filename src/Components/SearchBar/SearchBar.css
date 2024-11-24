@@ -1,0 +1,21 @@
+#search {
+    width: 30%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 5px solid rgb(165, 27, 27);
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+#button {
+    width: 10%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 5px solid rgb(165, 27, 27);
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: rgb(165, 27, 27);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
