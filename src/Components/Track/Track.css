@@ -9,3 +9,11 @@
     border-radius: 20px;
     max-width: 90%
 }
+
+#trackPreview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 75%;
+    max-width: 40%;
+}

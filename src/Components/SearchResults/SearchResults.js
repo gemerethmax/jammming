@@ -11,6 +11,7 @@ function SearchResults(props) {
       id={song.id} 
       uri={song.uri}
       setPlaylist={props.setPlaylist}
+      preview={song.preview}
       
     />
   ));

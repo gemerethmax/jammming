@@ -20,7 +20,7 @@ function SearchBar(props) {
       setError(null); 
 
           try {
-            const response = await fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(searchItem)}&type=album%2Ctrack%2Cplaylist%2Cartist&market=US&limit=15&offset=5`, 
+            const response = await fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(searchItem)}&type=album%2Ctrack%2Cplaylist%2Cartist&market=US&limit=50&offset=0&include_external=audio`, 
             {
               method: 'GET',
               headers: {
@@ -43,7 +43,6 @@ function SearchBar(props) {
   
         useEffect(() => {
           if (data) {
-
             let items = data.tracks.items;
             let trackItems = items.map((song) => {
               return {
@@ -51,7 +50,8 @@ function SearchBar(props) {
                 name: song.name,
                 artist: song.artists[0].name,
                 album: song.album.name,
-                uri: song.uri
+                uri: song.uri,
+                preview: song.preview_url
               }
             })
             props.setResults(trackItems);

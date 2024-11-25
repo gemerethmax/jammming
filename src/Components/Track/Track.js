@@ -15,10 +15,17 @@ function Track(props) {
       <p id="track">
         Song - {props.name} |
         Artist - {props.artist} |
-        Album - {props.album}   
+        Album - {props.album} |
+        {props.preview && (
+            <audio id="trackPreview" controls>
+              <source src={props.preview} type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          )}
         <button onClick={clickHandler}>+</button>
-      </p>
-    </div>
+        </p>
+    
+  </div>
   );
 }
 
