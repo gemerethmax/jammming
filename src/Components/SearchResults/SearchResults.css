@@ -1,3 +1,14 @@
 .searchResults {
   justify-self: center;
 }
+
+#showMoreButton {
+  margin-left: 85px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  border-color: rgb(165, 27, 27) ;
+  height: 40px;
+  width: 60%;
+  background-color: #1DB954;
+}
