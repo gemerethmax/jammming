@@ -22,7 +22,7 @@ function SearchResults(props) {
     
 
   return (
-    <div>
+    <div id='searchResultList'>
     <h2 className='searchResults'>Search Results</h2>
       {count === 0 && tracklist.slice(0, 20).map((track, index) => (
         <div key={index}>{track}</div>
