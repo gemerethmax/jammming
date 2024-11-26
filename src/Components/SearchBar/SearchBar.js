@@ -46,7 +46,7 @@ function SearchBar(props) {
           
         };
         
-        useEffect((props) => {
+        useEffect(() => {
           if (data) {
             let items = data.tracks.items;
             let trackItems = items.map((song) => {
