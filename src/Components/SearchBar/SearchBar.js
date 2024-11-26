@@ -12,6 +12,7 @@ function SearchBar(props) {
 
     const handleClick = async () => {
       
+      
       if (!searchItem.trim()) {
         setError('Please enter a search term');
         return;
@@ -38,10 +39,14 @@ function SearchBar(props) {
           } catch (err) {
             setError(`Failed to fetch data: ${err.message}`); // Handle errors
           }
+
+          if(error) {
+            console.log(error);
+          }
           
         };
-  
-        useEffect(() => {
+        
+        useEffect((props) => {
           if (data) {
             let items = data.tracks.items;
             let trackItems = items.map((song) => {
