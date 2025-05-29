@@ -11,22 +11,21 @@ function Track(props) {
   };
 
   return (
-    <div>
-      <p id="track">
-        Song - {props.name} |
-        Artist - {props.artist} |
-        Album - {props.album} |
-        {props.preview && (
-            <audio id="trackPreview" controls>
-              <source src={props.preview} type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-          )}
-        <button onClick={clickHandler}>+</button>
-        </p>
-    
+  <div>
+    <section id="track">
+      <img id="trackPreview" src={props.img} alt={`${props.album} cover`} />
+      <span>Song - {props.name} | </span>
+      <span>Artist - {props.artist} | </span>
+      <span>Album - {props.album} | </span>
+      {props.preview && (
+        <audio controls src={props.preview}>
+          Your browser does not support the audio element.
+        </audio>
+      )}
+      <button onClick={clickHandler}>+</button>
+    </section>
   </div>
-  );
+);
 }
 
 export default Track;

@@ -2,10 +2,11 @@
 import React from 'react';
 import Track from '../Track/Track';
 import './SearchResults.css';
+import {useState} from 'react';
 
 function SearchResults(props) {
 
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = useState(0);
 
   const tracklist = props.value.map((song) => (
     <Track
@@ -15,7 +16,8 @@ function SearchResults(props) {
       id={song.id} 
       uri={song.uri}
       setPlaylist={props.setPlaylist}
-      preview={song.preview}
+      preview={song.href}
+      img={song.album?.images?.[0]?.url}
       
     />
   ));

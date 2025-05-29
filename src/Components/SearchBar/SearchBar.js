@@ -33,9 +33,10 @@ function SearchBar({ setResults, accessToken }) {
       setError(`Failed to fetch data: ${err.message}`); // Handle errors
     }
   };
-
+ 
   useEffect(() => {
     if (data) {
+      console.log(data)
       let items = data.tracks.items;
       let trackItems = items.map((song) => {
         return {
@@ -44,7 +45,8 @@ function SearchBar({ setResults, accessToken }) {
           artist: song.artists[0].name,
           album: song.album.name,
           uri: song.uri,
-          preview: song.preview_url
+          preview: song.preview_url,
+          img: song.album?.images?.[0]?.url
         };
       });
       setResults(trackItems);
